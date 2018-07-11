@@ -1,21 +1,11 @@
-const webdriver = require('selenium-webdriver');
+var webdriver = require('selenium-webdriver');
 
-const logging = require('selenium-webdriver').logging;
+var driver = new webdriver.Builder().
+    usingServer('http://selenium-hub:4444/wd/hub').
+    withCapabilities(webdriver.Capabilities.chrome()).
+    build();
 
-describe("try", function() {
-    it("try", function() {
-        logging.installConsoleHandler();
-        logging.getLogger('promise.ControlFlow').setLevel(logging.Level.ALL);
+driver.get('http://www.google.com/ncr');
+driver.wait(until.titleIs('Google'), 1000);
+driver.quit();
 
-        let driver = new Builder()
-            .forBrowser('chrome')
-            .usingServer('http://selenium-hub:4444/wd/hub')
-            .build();
-
-        driver.get('http://www.google.com/ncr');
-        driver.findElement(By.name('q')).sendKeys('webdriver');
-        driver.findElement(By.name('btnK')).click();
-        driver.wait(until.titleIs('webdriver - Google Search'), 1000);
-        driver.quit();
-    })
-})
