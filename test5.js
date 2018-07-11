@@ -10,6 +10,9 @@ var chromeCapabilities = webdriver.Capabilities.chrome();
     });
 
 var driver = new webdriver.Builder().
+    setProxy(proxy.manual({ http : 'egress-http-proxy:8080',
+      https : 'egress-http-proxy:8080',
+      })).
     usingServer('http://selenium-hub:4444/wd/hub').
     withCapabilities(chromeCapabilities).
     setLoggingPrefs(prefs).
