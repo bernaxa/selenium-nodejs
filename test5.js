@@ -6,6 +6,5 @@ var driver = new webdriver.Builder().
     build();
 
 driver.get('http://www.google.com/ncr');
-driver.wait(until.titleIs('Google'), 1000);
 driver.quit();
 
