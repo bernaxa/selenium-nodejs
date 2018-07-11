@@ -14,7 +14,7 @@ var proxy = require('selenium-webdriver/proxy');
 var driver = new webdriver.Builder().
     usingServer('http://selenium-hub:4444/wd/hub').
     withCapabilities(chromeCapabilities).
-    setProxy(proxy.manual({http: 'egress-http-proxy:8080'})).
+    setProxy(proxy.manual({http: 'egress-http-proxy:8080', https: 'egress-http-proxy:8080'})).
     setLoggingPrefs(prefs).
     build();
 
