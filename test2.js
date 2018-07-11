@@ -15,6 +15,7 @@ describe('basic test', function () {
     var driver;
     before(function(){
         driver = new webdriver.Builder().
+        usingServer('http://selenium-hub:4444/wd/hub').
         withCapabilities(webdriver.Capabilities.chrome()).
         build();
         console.log("Selenium Webdriver Chrome Started");
