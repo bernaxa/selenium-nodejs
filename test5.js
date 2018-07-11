@@ -9,10 +9,19 @@ var chromeCapabilities = webdriver.Capabilities.chrome();
       'args': ['--headless', '--disable-gpu']
     });
 
+var proxy = require('selenium-webdriver/proxy');
+var profile = new firefox.Profile();
+profile.setPreference("network.proxy.type", 1); // Manual proxy config
+profile.setPreference("network.proxy.http", "egress-http-proxy");
+profile.setPreference("network.proxy.http_port", 8080);
+profile.setPreference("network.proxy.ssl", "egress-http-proxy");
+profile.setPreference("network.proxy.ssl_port", 8080);
+
+var opts = new firefox.Options();
+opts.setProfile(profile);
+
 var driver = new webdriver.Builder().
-    setProxy(proxy.manual({ http : 'egress-http-proxy:8080',
-      https : 'egress-http-proxy:8080',
-      })).
+    setChromeOptions(opts);
     usingServer('http://selenium-hub:4444/wd/hub').
     withCapabilities(chromeCapabilities).
     setLoggingPrefs(prefs).
