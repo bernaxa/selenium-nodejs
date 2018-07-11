@@ -1,5 +1,7 @@
 const webdriver = require('selenium-webdriver');
 
+const logging = require('selenium-webdriver').logging;
+
 describe("try", function() {
     it("try", function() {
         logging.installConsoleHandler();
