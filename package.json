@@ -4,9 +4,11 @@
   "description": "A project to get started with functional testing using Selenium, JavaScript and Mocha.",
   "main": "test1.js",
   "dependencies": {
-    "chai": "^3.5.0",
-    "mocha": "^2.5.3",
-    "selenium-webdriver": "^2.53.2"
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "chromedriver": "^2.38.2",
+    "mocha": "^5.1.1",
+    "selenium-webdriver": "^4.0.0-alpha.1"
   },
   "devDependencies": {},
   "scripts": {
