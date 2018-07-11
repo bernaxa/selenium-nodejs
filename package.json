@@ -1,0 +1,17 @@
+{
+  "name": "selenium-nodejs",
+  "version": "1.0.0",
+  "description": "A project to get started with functional testing using Selenium, JavaScript and Mocha.",
+  "main": "test1.js",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3",
+    "selenium-webdriver": "^2.53.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha test1.js"
+  },
+  "author": "",
+  "license": ""
+}
