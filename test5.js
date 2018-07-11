@@ -1,4 +1,4 @@
-import { Builder, By, logging, until } from 'selenium-webdriver';
+const webdriver = require('selenium-webdriver');
 
 describe("try", function() {
     it("try", function() {
