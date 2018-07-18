@@ -1,6 +1,7 @@
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -27,7 +28,7 @@ public class TestClass {
 		
     FirefoxOptions opts = new FirefoxOptions().setLogLevel(Level.ALL);
     System.out.println(opts.toCapabilities().asMap());
-    System.out.println(opts.toJson());
+    //System.out.println(opts.toJson());
     driver = new RemoteWebDriver(new URL("http://selenium-node-firefox:5555/wd/hub"), opts);
     driver.get("http://www.google.com");
     driver.quit();
