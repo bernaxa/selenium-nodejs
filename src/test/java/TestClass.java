@@ -24,7 +24,8 @@ public class TestClass {
         if (browser.equalsIgnoreCase("firefox")) {
             System.out.println(" Executing on FireFox");
             //String Node = "http://localhost:5566/wd/hub";
-            String Node = "http://localhost:4444/wd/hub";
+            //String Node = "http://localhost:4444/wd/hub";
+	    String Node = "http://selenium-hub:4444/wd/hub";
             DesiredCapabilities cap = DesiredCapabilities.firefox();
             cap.setBrowserName("firefox");
 
