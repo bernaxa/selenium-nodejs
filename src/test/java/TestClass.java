@@ -29,7 +29,7 @@ public class TestClass {
 	    String Node = "http://selenium-node-firefox:5555/wd/hub";
             DesiredCapabilities cap = DesiredCapabilities.firefox();
             cap.setBrowserName("firefox");
-	    cap.SetCapability("headless", true);
+	    cap.setCapability("headless", true);
 		
             driver = new RemoteWebDriver(new URL(Node), cap);
             // Puts an Implicit wait, Will wait for 10 seconds before throwing
