@@ -28,7 +28,7 @@ public class TestClass {
     System.out.println(opts.toCapabilities().asMap());
     System.out.println(opts.toJson());
     driver = new RemoteWebDriver(new URL("http://selenium-node-firefox:5555/wd/hub"), opts);
-    driver.get("http://www.google.com")
+    driver.get("http://www.google.com");
     driver.quit();
 		
             //String Node = "http://localhost:5566/wd/hub";
