@@ -26,7 +26,7 @@ public class TestClass {
             //String Node = "http://localhost:5566/wd/hub";
             //String Node = "http://localhost:4444/wd/hub";
 	    //String Node = "http://selenium-hub:4444/wd/hub";
-	    String Node = "http://10.1.214.72:5555/wd/hub";
+	    String Node = "http://selenium-node-firefox:5555/wd/hub";
             DesiredCapabilities cap = DesiredCapabilities.firefox();
             cap.setBrowserName("firefox");
 
