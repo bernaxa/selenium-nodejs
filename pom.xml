@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>TestNGSeleniumGrid</groupId>
+    <artifactId>TestClass</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <!-- original
+    <dependencies>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.11</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.9.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.16</version>
+        </dependency>
+    </dependencies>
+    -->
+
+    <properties>
+        <testng.version>6.11</testng.version>
+        <selenium.version>3.9.0</selenium.version>    <!-- FINAL 2.X RELEASE @ 2.53.1 -->
+        <maven.compiler.plugin.version>3.5.1</maven.compiler.plugin.version>
+        <maven.surefire.plugin.version>2.18.1</maven.surefire.plugin.version>
+        <maven-javadoc-plugin.version>2.10.4</maven-javadoc-plugin.version>
+
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+
+        <!-- chrome,firefox,opera,ie,safari,htmlunit,iphone -->
+        <browser.under.test>chrome</browser.under.test>
+
+        <!-- <site.url> -->
+        <!-- UTC SMOKE            https://dwylbtspbapp01.talentsuite.swglab.ibm.com -->
+        <!-- UTC SMOKE CORE        https://qa-wylb.talentsuite.swglab.ibm.com -->
+        <!-- IQA85-A            https://qa-wylb.talentsuite.swglab.ibm.com -->
+        <!-- Stage                https://2x-staging.kenexa.com -->
+        <!-- Prod-US            https://2x.kenexa.com -->
+        <url.under.test>https://dwylbtspbapp01.talentsuite.swglab.ibm.com</url.under.test>
+
+        <!-- iqautcclienta,stgutcclienta,produtcclienta -->
+        <!-- <tenant.under.test>iqautcclienta</tenant.under.test> -->
+        <tenant.under.test>iqautcclienta</tenant.under.test>
+
+        <!--
+          <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+          <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+          -->
+
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.8.8</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${selenium.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/ -->
+        <!--
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-api</artifactId>
+              <version>${selenium.version}</version>
+        </dependency>
+        -->
+        <!--
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-remote-driver</artifactId>
+            <version>${selenium.version}</version>
+        </dependency>
+        -->
+        <!-- AndroidDriver is deprecated
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-android-driver</artifactId>
+            <version>2.39.0</version>
+        </dependency>
+          -->
+        <!-- iPhoneDriver is deprecated
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-iphone-driver</artifactId>
+            <version>2.39.0</version>
+        </dependency>
+        -->
+        <!--
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-firefox-driver</artifactId>
+            <version>${selenium.version}</version>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-chrome-driver</artifactId>
+            <version>${selenium.version}</version>
+        </dependency>
+        <!--
+        <dependency>
+            <groupId>com.opera</groupId>
+            <artifactId>operadriver</artifactId>
+            <version>0.7.3</version>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20090211</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
+        <dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.skyscreamer/jsonassert -->
+        <dependency>
+            <groupId>org.skyscreamer</groupId>
+            <artifactId>jsonassert</artifactId>
+            <version>1.4.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.8.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.paulhammant/ngwebdriver -->
+
+        <dependency>
+            <groupId>com.paulhammant</groupId>
+            <artifactId>ngwebdriver</artifactId>
+            <!-- Compile Dependencies » selenium-java 2.53.1 -->
+            <version>0.9.7</version>
+        </dependency>
+
+
+
+    </dependencies>
+
+
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.4</version>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven.surefire.plugin.version}</version>
+                <configuration>
+                    <forkCount>10</forkCount>
+                    <reuseForks>true</reuseForks>
+                    <argLine>-Xmx512m</argLine>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>TestNG.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                    <!--<systemPropertyVariables>
+                        <browser>${browser}</browser>
+                    </systemPropertyVariables>-->
+                    <systemProperties>
+                        <property>
+                            <name>tenant.path</name>
+                            <value>/wps/portal/$tenant/${tenant.under.test}/SWF/login</value>
+                        </property>
+                    </systemProperties>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.plugin.version}</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>${maven-javadoc-plugin.version}</version>
+                <configuration>
+                    <outputDirectory>${project.build.directory}/javadoc</outputDirectory>
+                    <doctitle>Selenium UTC for ${project.name} ${project.version}</doctitle>
+                    <windowtitle>Selenium UTC for  ${project.name} ${project.version}</windowtitle>
+                    <testDoctitle>Selenium Test UTC for ${project.name} ${project.version}</testDoctitle>
+                    <testWindowtitle>Selenium Test UTC for ${project.name} ${project.version}</testWindowtitle>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>test-javadoc</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+    <!-- profiles -->
+    <profiles>
+        <profile>
+            <id>local</id>
+            <properties>
+                <env>local</env>
+                <user.username>dan.vinsky</user.username>
+                <user.password>QAtest234#</user.password>
+                <grid2.hub>http://miketest.mulvm.ie.ibm.com:4444/wd/hub</grid2.hub>
+                <site.url>${url.under.test}</site.url>
+                <browser.name>${browser.under.test}</browser.name>
+                <browser.version></browser.version>
+                <browser.platform>WINDOWS</browser.platform>
+                <tenant.path>/wps/portal/$tenant/produtcclienta/SWF/login</tenant.path>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <env>dev</env>
+                <user.username></user.username>
+                <user.password></user.password>
+                <grid2.hub>http://miketest.mulvm.ie.ibm.com:4444/wd/hub</grid2.hub>
+                <site.url></site.url>
+                <browser.name></browser.name>
+                <browser.version></browser.version>
+                <browser.platform></browser.platform>
+            </properties>
+        </profile>
+        <profile>
+            <id>test</id>
+            <properties>
+                <env>test</env>
+                <user.username></user.username>
+                <user.password></user.password>
+                <grid2.hub>http://miketest.mulvm.ie.ibm.com:4444/wd/hub</grid2.hub>
+                <site.url></site.url>
+                <browser.name></browser.name>
+                <browser.version></browser.version>
+                <browser.platform></browser.platform>
+            </properties>
+        </profile>
+        <profile>
+            <id>prod</id>
+            <properties>
+                <env>prod</env>
+                <user.username></user.username>
+                <user.password></user.password>
+                <grid2.hub>http://miketest.mulvm.ie.ibm.com:4444/wd/hub</grid2.hub>
+                <site.url></site.url>
+                <browser.name></browser.name>
+                <browser.version></browser.version>
+                <browser.platform></browser.platform>
+            </properties>
+        </profile>
+        <profile>
+            <id>force-local-driver</id>
+            <properties>
+                <grid2.hub>http://miketest.mulvm.ie.ibm.com:4444/wd/hub</grid2.hub>
+            </properties>
+        </profile>
+    </profiles>
+
+</project>
