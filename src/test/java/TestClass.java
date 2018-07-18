@@ -23,6 +23,14 @@ public class TestClass {
 
         if (browser.equalsIgnoreCase("firefox")) {
             System.out.println(" Executing on FireFox");
+		
+    FirefoxOptions opts = new FirefoxOptions().setLogLevel(Level.ALL);
+    System.out.println(opts.toCapabilities().asMap());
+    System.out.println(opts.toJson());
+    driver = new RemoteWebDriver(new URL("http://selenium-node-firefox:5555/wd/hub"), opts);
+    driver.get("http://www.google.com")
+    driver.quit();
+		
             //String Node = "http://localhost:5566/wd/hub";
             //String Node = "http://localhost:4444/wd/hub";
 	    //String Node = "http://selenium-hub:4444/wd/hub";
