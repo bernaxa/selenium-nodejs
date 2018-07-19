@@ -42,7 +42,7 @@ System.getProperties().put("http.nonProxyHosts","localhost|127.*|[::1]|selenium-
     driver.get("http://www.google.com");
     System.out.println(driver.getTitle());
     System.out.println(" End on Chrome");
-    driver.quit();
+    //driver.quit();
     System.out.println(" After quit");
 /*		
             //String Node = "http://localhost:5566/wd/hub";
@@ -119,6 +119,6 @@ System.getProperties().put("http.nonProxyHosts","localhost|127.*|[::1]|selenium-
 
     @AfterTest
     public void closeBrowser() {
-        // driver.quit();
+         driver.quit();
     }
 }
