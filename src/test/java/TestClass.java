@@ -118,7 +118,7 @@ System.getProperties().put("http.nonProxyHosts","localhost|127.*|[::1]|selenium-
         }
     }
 	
-    @Test
+    /*@Test
     public void testAXAIM() {
         driver.navigate().to("http://www.axa-im.com");	
         System.out.println(driver.getTitle());	    
@@ -131,7 +131,7 @@ System.getProperties().put("http.nonProxyHosts","localhost|127.*|[::1]|selenium-
         } else {
             System.out.println(" The Result is Fail");
         }
-    }
+    }*/
 
     @AfterTest
     public void closeBrowser() {
