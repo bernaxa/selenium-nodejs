@@ -136,7 +136,7 @@ System.getProperties().put("http.nonProxyHosts","localhost|127.*|[::1]|selenium-
                 By.xpath("(//input[contains(@value,'Calculate')])[1]")).click();
         // Get the Result Text based on its xpath
         String result = driver.findElement(
-                By.xpath(".//*[@id='content']/p[2]/font/b")).getText();
+                By.xpath("//*[@id="breadcrumbs"]/div/ul/li[1]/a")).getText();
         // Print a Log In message to the screen
         System.out.println(" The Result is " + result);
         if (result.equals("5.95")) {
