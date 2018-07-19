@@ -119,24 +119,11 @@ System.getProperties().put("http.nonProxyHosts","localhost|127.*|[::1]|selenium-
     }
 	
     @Test
-    public void calculatepercent2() {
-        // Click on Math Calculators
-        driver.findElement(By.xpath("//a[contains(text(),'Math')]")).click();
-        // Click on Percent Calculators
-        driver.findElement(
-                By.xpath("//a[contains(text(),'Percentage Calculator')]"))
-                .click();
-        // Enter value 17 in the first number of the percent Calculator
-        driver.findElement(By.id("cpar1")).sendKeys("17");
-        // Enter value 35 in the second number of the percent Calculator
-        driver.findElement(By.id("cpar2")).sendKeys("35");
-
-        // Click Calculate Button
-        driver.findElement(
-                By.xpath("(//input[contains(@value,'Calculate')])[1]")).click();
+    public void testAXAIM() {
+        driver.navigate().to("http://www.axa-im.com");	
+        System.out.println(driver.getTitle());	    
         // Get the Result Text based on its xpath
-        String result = driver.findElement(
-                By.xpath("//*[@id="breadcrumbs"]/div/ul/li[1]/a")).getText();
+        String result = driver.findElement(By.xpath("//*[@id='breadcrumbs']/div/ul/li[1]/a")).getText();
         // Print a Log In message to the screen
         System.out.println(" The Result is " + result);
         if (result.equals("5.95")) {
@@ -145,21 +132,6 @@ System.getProperties().put("http.nonProxyHosts","localhost|127.*|[::1]|selenium-
             System.out.println(" The Result is Fail");
         }
     }
-
-    /*@Test
-    public void testAXAIM() {
-        driver.navigate().to("http://www.axa-im.com");	
-        System.out.println(driver.getTitle());	    
-        // Get the Result Text based on its xpath
-        String result = driver.findElement(By.xpath("//*[@id="breadcrumbs"]/div/ul/li[1]/a")).getText();
-        // Print a Log In message to the screen
-        System.out.println(" The Result is " + result);
-        if (result.equals("5.95")) {
-            System.out.println(" The Result is Pass");
-        } else {
-            System.out.println(" The Result is Fail");
-        }
-    }*/
 
     @AfterTest
     public void closeBrowser() {
