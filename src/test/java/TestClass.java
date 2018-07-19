@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
@@ -28,6 +29,8 @@ public class TestClass {
             System.out.println(" Executing on Chrome");
 		
     //FirefoxOptions opts = new FirefoxOptions().setLogLevel(Level.ALL);
+    ChromeOptions opts = new ChromeOptions().setLogLevel(Level.ALL);
+    opts.setHeadless(true);		
     System.out.println(opts.toCapabilities().asMap());
     //System.out.println(opts.toJson());
 System.getProperties().put("http.proxyHost", "egress-http-proxy");
