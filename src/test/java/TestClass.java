@@ -32,7 +32,8 @@ public class TestClass {
 System.getProperties().put("http.proxyHost", "egress-http-proxy");
 System.getProperties().put("http.proxyPort", "8080");
 System.getProperties().put("https.proxyHost", "egress-http-proxy");
-System.getProperties().put("https.proxyPort", "8080"); 		
+System.getProperties().put("https.proxyPort", "8080"); 	
+System.getProperties().put("http.nonProxyHosts","localhost|127.*|[::1]|selenium-node-firefox");
     driver = new RemoteWebDriver(new URL("http://selenium-node-firefox:5555/wd/hub"), opts);
     driver.get("http://www.google.com");
     driver.quit();
