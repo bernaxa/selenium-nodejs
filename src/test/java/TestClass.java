@@ -61,8 +61,6 @@ System.getProperties().put("http.nonProxyHosts","localhost|127.*|[::1]|selenium-
             // Launch website
             driver.navigate().to(URL);
             System.out.println(driver.getTitle());
-	    driver.navigate().to("http://www.axa-im.com");	
-            System.out.println(driver.getTitle());	    
             //driver.manage().window().maximize();
         } else if (browser.equalsIgnoreCase("chrome")) {
             System.out.println(" Executing on CHROME");
@@ -111,6 +109,22 @@ System.getProperties().put("http.nonProxyHosts","localhost|127.*|[::1]|selenium-
         // Get the Result Text based on its xpath
         String result = driver.findElement(
                 By.xpath(".//*[@id='content']/p[2]/font/b")).getText();
+        // Print a Log In message to the screen
+        System.out.println(" The Result is " + result);
+        if (result.equals("5.95")) {
+            System.out.println(" The Result is Pass");
+        } else {
+            System.out.println(" The Result is Fail");
+        }
+    }
+	
+    @Test
+    public void testAXAIM() {
+        driver.navigate().to("http://www.axa-im.com");	
+        System.out.println(driver.getTitle());	    
+        // Get the Result Text based on its xpath
+        String result = driver.findElement(
+                By.xpath("//*[@id="breadcrumbs"]/div/ul/li[1]/a")).getText();
         // Print a Log In message to the screen
         System.out.println(" The Result is " + result);
         if (result.equals("5.95")) {
