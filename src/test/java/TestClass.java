@@ -61,7 +61,7 @@ System.getProperties().put("http.nonProxyHosts","localhost|127.*|[::1]|selenium-
             // Launch website
             driver.navigate().to(URL);
             System.out.println(driver.getTitle());
-	    driver.navigate().to("http://liferay-ee-int.axa-services-es-dev-int.pink.eu-central-1.aws.openpaas.axa-cloud.com");	
+	    driver.navigate().to("http://www.axa-im.com");	
             System.out.println(driver.getTitle());	    
             //driver.manage().window().maximize();
         } else if (browser.equalsIgnoreCase("chrome")) {
