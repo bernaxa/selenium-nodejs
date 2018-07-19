@@ -40,6 +40,7 @@ System.getProperties().put("https.proxyPort", "8080");
 System.getProperties().put("http.nonProxyHosts","localhost|127.*|[::1]|selenium-node-chrome");
     driver = new RemoteWebDriver(new URL("http://selenium-node-chrome:5555/wd/hub"), opts);
     driver.get("http://www.google.com");
+    System.out.println(driver.getTitle());
     System.out.println(" End on Chrome");
     driver.quit();
     System.out.println(" After quit");
