@@ -44,7 +44,7 @@ System.getProperties().put("http.nonProxyHosts","localhost|127.*|[::1]|selenium-
     System.out.println(" End on Chrome");
     driver.quit();
     System.out.println(" After quit");
-		
+/*		
             //String Node = "http://localhost:5566/wd/hub";
             //String Node = "http://localhost:4444/wd/hub";
 	    //String Node = "http://selenium-hub:4444/wd/hub";
@@ -57,7 +57,7 @@ System.getProperties().put("http.nonProxyHosts","localhost|127.*|[::1]|selenium-
             // Puts an Implicit wait, Will wait for 10 seconds before throwing
             // exception
             driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
+*/
             // Launch website
             driver.navigate().to(URL);
             driver.manage().window().maximize();
