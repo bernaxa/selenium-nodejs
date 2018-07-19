@@ -123,8 +123,7 @@ System.getProperties().put("http.nonProxyHosts","localhost|127.*|[::1]|selenium-
         driver.navigate().to("http://www.axa-im.com");	
         System.out.println(driver.getTitle());	    
         // Get the Result Text based on its xpath
-        String result = driver.findElement(
-                By.xpath("//*[@id="breadcrumbs"]/div/ul/li[1]/a")).getText();
+        String result = driver.findElement(By.xpath("//*[@id="breadcrumbs"]/div/ul/li[1]/a")).getText();
         // Print a Log In message to the screen
         System.out.println(" The Result is " + result);
         if (result.equals("5.95")) {
