@@ -29,8 +29,8 @@ public class TestClass {
             System.out.println(" Executing on Chrome");
 		
     //FirefoxOptions opts = new FirefoxOptions().setLogLevel(Level.ALL);
-    //ChromeOptions opts = new ChromeOptions().setLogLevel(Level.ALL);
-    opts.setHeadless(true);		
+    ChromeOptions opts = new ChromeOptions();
+    //opts.setHeadless(true);		
     System.out.println(opts.toCapabilities().asMap());
     //System.out.println(opts.toJson());
 System.getProperties().put("http.proxyHost", "egress-http-proxy");
