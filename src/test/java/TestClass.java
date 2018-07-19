@@ -25,8 +25,9 @@ public class TestClass {
 
         if (browser.equalsIgnoreCase("firefox")) {
             System.out.println(" Executing on FireFox");
+            System.out.println(" Executing on Chrome");
 		
-    FirefoxOptions opts = new FirefoxOptions().setLogLevel(Level.ALL);
+    //FirefoxOptions opts = new FirefoxOptions().setLogLevel(Level.ALL);
     System.out.println(opts.toCapabilities().asMap());
     //System.out.println(opts.toJson());
 System.getProperties().put("http.proxyHost", "egress-http-proxy");
@@ -34,9 +35,11 @@ System.getProperties().put("http.proxyPort", "8080");
 System.getProperties().put("https.proxyHost", "egress-http-proxy");
 System.getProperties().put("https.proxyPort", "8080"); 	
 System.getProperties().put("http.nonProxyHosts","localhost|127.*|[::1]|selenium-node-firefox");
-    driver = new RemoteWebDriver(new URL("http://selenium-node-firefox:5555/wd/hub"), opts);
+    driver = new RemoteWebDriver(new URL("http://selenium-node-chrome:5555/wd/hub"), opts);
     driver.get("http://www.google.com");
+    System.out.println(" End on Chrome");
     driver.quit();
+    System.out.println(" After quit");
 		
             //String Node = "http://localhost:5566/wd/hub";
             //String Node = "http://localhost:4444/wd/hub";
