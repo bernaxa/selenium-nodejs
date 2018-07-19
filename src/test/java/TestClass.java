@@ -31,7 +31,7 @@ public class TestClass {
     //FirefoxOptions opts = new FirefoxOptions().setLogLevel(Level.ALL);
     ChromeOptions opts = new ChromeOptions();
     //opts.setHeadless(true);		
-    System.out.println(opts.toCapabilities().asMap());
+    //System.out.println(opts.toCapabilities().asMap());
     //System.out.println(opts.toJson());
 System.getProperties().put("http.proxyHost", "egress-http-proxy");
 System.getProperties().put("http.proxyPort", "8080");
