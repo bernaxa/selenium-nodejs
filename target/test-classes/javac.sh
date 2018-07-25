@@ -1,0 +1,1 @@
+/bin/sh -c cd /home/qauto/selenium-nodejs && "C:/Program Files/Java/jdk1.8.0_65/bin/javac.exe" @/home/qauto/selenium-nodejs/target/test-classes/org.codehaus.plexus.compiler.javac.JavacCompiler292998281100002563arguments
