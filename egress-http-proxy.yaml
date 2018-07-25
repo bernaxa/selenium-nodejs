@@ -1,0 +1,14 @@
+apiVersion: v1
+data:
+  limit-cpu: 100m
+  limit-memory: 400Mi
+  target: external
+  whitelist-domains: demo.openmrs.org;www.axa-im.com;*.calculator.net;*.sonatype.org;*.slack.com;*.google.com;*.cloudfront.net;*.wt-safetag.com;*.gstatic.com;*.gvt1.com;*.googleapis.com;gwapa.intraconex.com;*.inithealth.com;*.jboss.org;*.amazonaws.com;*.apache.org;*.artifactoryonline.com;*.axa-tech.com;*.bintray.com;*.bitbucket.org;centos.mirrors.as250.net;*.centos.org;*.cluster.local;*.docker.io;*.fedoraproject.org;*.github.com;*.gradle.org;*.jenkins-ci.org;*.jenkins.io;*.jfrog.io;*.jfrog.org;*.maven.org;mirror.alpix.eu;mirror.eu.oneandone.net;mirror.netcologne.de;mirror.softaculous.com;nodejs.org;*.nodesecurity.io;*.npmjs.org;npmjs.org;*.openpaas.axa-cloud.com;*.osuosl.org;registry.access.redhat.com;kubernetes.default;ftp.tu-chemnitz.de
+  whitelist-ports-http: 80;8080;8888
+  whitelist-ports-https: 443;8443
+kind: ConfigMap
+metadata:
+  labels:
+    axa-cloud.com/kind: egress-http-proxy
+  name: egress-http-proxy
+  namespace: tools-prod-axa-services-es
