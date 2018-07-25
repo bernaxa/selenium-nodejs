@@ -42,6 +42,8 @@ public class OpenMRSTests
 		catch(MalformedURLException e) {
 			System.out.println("The url is not well formed: ");
 		}
+		driver.get("http://www.axa-im.com");	
+	        System.out.println(driver.getTitle());
 		testRunner = new TestNGCucumberRunner(OpenMRSTests.class);
 		
 	}
