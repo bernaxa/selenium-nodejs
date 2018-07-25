@@ -14,7 +14,7 @@ public class LoginPage
 	@Given("^Open Application and Enter url$")
 	public void open_Application_and_Enter_url() throws Throwable {
 	  OpenMRSTests.driver.get("https://demo.openmrs.org/openmrs/login.htm");
-	  
+	  System.out.println(OpenMRSTests.driver.getTitle());	  
 	}
 
 	@When("^enter username$")
