@@ -18,7 +18,7 @@ import cucumber.api.testng.TestNGCucumberRunner;
 
 @CucumberOptions(
 		features="src/test/resources/features",
-		//glue={"org.cucumber.stepdefs"},
+		glue={"org.cucumber.stepdefs"},
 		format=
 				{"pretty",
 				"html:target/cucumber-reports/cucumber-pretty",
