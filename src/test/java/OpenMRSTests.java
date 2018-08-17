@@ -33,12 +33,16 @@ public class OpenMRSTests
 	@BeforeClass
 	public void setUP()
 	{
+		public static final String USERNAME = "YOUR_USERNAME";
+  		public static final String ACCESS_KEY = "YOUR_ACCESS_KEY";
+  		public static final String SauceLabsURL = "http://" + USERNAME + ":" + ACCESS_KEY + "@ondemand.saucelabs.com:80/wd/hub";
 		//System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		//driver = new ChromeDriver();
 		ChromeOptions opts = new ChromeOptions();
 		try {
-			driver = new RemoteWebDriver(new URL("http://selenium-node-chrome:5555/wd/hub"), opts);
+			//driver = new RemoteWebDriver(new URL("http://selenium-node-chrome:5555/wd/hub"), opts);
 			//driver = new RemoteWebDriver(new URL("http://selenium-hub:4444/wd/hub"), opts);
+			driver = new RemoteWebDriver(new URL(SauceLabsURL), opts);
 		}
 		catch(MalformedURLException e) {
 			System.out.println("The url is not well formed: ");
