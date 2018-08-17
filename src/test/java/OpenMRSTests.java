@@ -33,8 +33,8 @@ public class OpenMRSTests
 	@BeforeClass
 	public void setUP()
 	{
-		public static final String USERNAME = "YOUR_USERNAME";
-  		public static final String ACCESS_KEY = "YOUR_ACCESS_KEY";
+		public static final String USERNAME = "mobile-sp";
+  		public static final String ACCESS_KEY = "f0467e7b-4024-4198-94f6-328384cf56a2";
   		public static final String SauceLabsURL = "http://" + USERNAME + ":" + ACCESS_KEY + "@ondemand.saucelabs.com:80/wd/hub";
 		//System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		//driver = new ChromeDriver();
