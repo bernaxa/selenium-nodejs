@@ -37,9 +37,9 @@ public class OpenMRSTests
 		//driver = new ChromeDriver();
 		ChromeOptions opts = new ChromeOptions();
 		try {
-			//driver = new RemoteWebDriver(new URL("http://selenium-node-chrome:5555/wd/hub"), opts);
+			driver = new RemoteWebDriver(new URL("http://selenium-node-chrome:5555/wd/hub"), opts);
 			//driver = new RemoteWebDriver(new URL("http://selenium-hub:4444/wd/hub"), opts);
-			driver = new RemoteWebDriver(new URL("http://mobile-sp:f0467e7b-4024-4198-94f6-328384cf56a2@ondemand.saucelabs.com:80/wd/hub"), opts);
+			//driver = new RemoteWebDriver(new URL("http://mobile-sp:f0467e7b-4024-4198-94f6-328384cf56a2@ondemand.saucelabs.com:80/wd/hub"), opts);
 		}
 		catch(MalformedURLException e) {
 			System.out.println("The url is not well formed: ");
