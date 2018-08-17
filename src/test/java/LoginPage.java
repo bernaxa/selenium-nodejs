@@ -19,7 +19,8 @@ public class LoginPage
 
 	@When("^enter username$")
 	public void enter_username() throws Throwable {
-		OpenMRSTests.driver.findElement(By.id("username")).sendKeys("Admin");
+		//OpenMRSTests.driver.findElement(By.id("username")).sendKeys("Admin");
+		OpenMRSTests.driver.findElement(By.cssSelector("#username")).sendKeys("Admin");
 	}
 
 	@When("^enter password$")
