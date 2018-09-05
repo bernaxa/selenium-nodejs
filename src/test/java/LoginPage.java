@@ -20,8 +20,8 @@ public class LoginPage
 	@When("^enter username$")
 	public void enter_username() throws Throwable {
 		//OpenMRSTests.driver.findElement(By.id("username")).sendKeys("Admin");
-		OpenMRSTests.driver.findElement(By.cssSelector("#username")).sendKeys("Admin");
-		OpenMRSTests.driver.findElement(By.XPath("/html//input[@id='username']")).sendKeys("Admin");
+		//OpenMRSTests.driver.findElement(By.cssSelector("#username")).sendKeys("Admin");
+		OpenMRSTests.driver.findElement(By.xpath("/html//input[@id='username']")).sendKeys("Admin");
 	}
 
 	@When("^enter password$")
