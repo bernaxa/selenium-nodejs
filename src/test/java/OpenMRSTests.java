@@ -60,6 +60,9 @@ System.getProperties().put("http.nonProxyHosts","localhost|127.*|[::1]|selenium-
 	      formatter = DateFormat.getTimeInstance();        // time only
 	      System.out.println("3: " + formatter.format(now));
 		driver.get("http://www.axa-im.com");	
+	      now = new Date();
+	      formatter = DateFormat.getTimeInstance();        // time only
+	      System.out.println("3.1: " + formatter.format(now));
 	        System.out.println(driver.getTitle());
 	      now = new Date();
 	      formatter = DateFormat.getTimeInstance();        // time only
