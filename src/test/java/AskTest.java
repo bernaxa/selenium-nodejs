@@ -16,6 +16,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class AskTest {
     @Test
     public void shouldAskGoogleForWebDriver() {
+	public static WebDriver driver;
+	    
         ChromeOptions opts = new ChromeOptions();
         //driver = new RemoteWebDriver(new URL("http://selenium-node-chrome:5555/wd/hub"), opts);
 		driver = new RemoteWebDriver(new URL("http://selenium-hub:4444/wd/hub"), opts);
