@@ -2,6 +2,7 @@ package org.cucumber.tests;
 
 import java.net.URL;
 import java.net.MalformedURLException;
+import java.text.DateFormat;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
