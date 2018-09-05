@@ -44,7 +44,9 @@ System.getProperties().put("http.proxyHost", "egress-http-proxy");
 System.getProperties().put("http.proxyPort", "8080");
 System.getProperties().put("https.proxyHost", "egress-http-proxy");
 System.getProperties().put("https.proxyPort", "8080"); 	
-System.getProperties().put("http.nonProxyHosts","localhost|127.*|[::1]|selenium-hub|selenium-node-chrome|selenium-node-firefox");		ChromeOptions opts = new ChromeOptions();
+System.getProperties().put("http.nonProxyHosts","localhost|127.*|[::1]|selenium-hub|selenium-node-chrome|selenium-node-firefox");		
+              ChromeOptions opts = new ChromeOptions();
+	      opts.addArguments("--no-sandbox");
 	      now = new Date();
 	      formatter = DateFormat.getTimeInstance();        // time only
 	      System.out.println("2: " + formatter.format(now));
