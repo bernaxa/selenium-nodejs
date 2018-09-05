@@ -33,6 +33,9 @@ public class OpenMRSTests
 	@BeforeClass
 	public void setUP()
 	{
+	      // Use DateFormat
+	      DateFormat formatter = DateFormat.getTimeInstance();        // time only
+	      System.out.println("1: " + formatter.format(now));
 		//System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		//driver = new ChromeDriver();
 System.getProperties().put("http.proxyHost", "egress-http-proxy");
@@ -40,6 +43,8 @@ System.getProperties().put("http.proxyPort", "8080");
 System.getProperties().put("https.proxyHost", "egress-http-proxy");
 System.getProperties().put("https.proxyPort", "8080"); 	
 System.getProperties().put("http.nonProxyHosts","localhost|127.*|[::1]|selenium-hub|selenium-node-chrome|selenium-node-firefox");		ChromeOptions opts = new ChromeOptions();
+	      formatter = DateFormat.getTimeInstance();        // time only
+	      System.out.println("2: " + formatter.format(now));
 		try {
 			driver = new RemoteWebDriver(new URL("http://selenium-node-chrome:5555/wd/hub"), opts);
 			//driver = new RemoteWebDriver(new URL("http://selenium-hub:4444/wd/hub"), opts);
@@ -48,9 +53,15 @@ System.getProperties().put("http.nonProxyHosts","localhost|127.*|[::1]|selenium-
 		catch(MalformedURLException e) {
 			System.out.println("The url is not well formed: ");
 		}
+	      formatter = DateFormat.getTimeInstance();        // time only
+	      System.out.println("3: " + formatter.format(now));
 		driver.get("http://www.axa-im.com");	
 	        System.out.println(driver.getTitle());
+	      formatter = DateFormat.getTimeInstance();        // time only
+	      System.out.println("4: " + formatter.format(now));
 		testRunner = new TestNGCucumberRunner(OpenMRSTests.class);
+	      formatter = DateFormat.getTimeInstance();        // time only
+	      System.out.println("5: " + formatter.format(now));
 		
 	}
 	@Test(description="login",dataProvider="features")
