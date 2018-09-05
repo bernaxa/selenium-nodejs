@@ -9,7 +9,7 @@ public class AskTest {
     public void shouldAskGoogleForWebDriver() {
         WebDriver browser = new FirefoxDriver();
 
-        browser.get("http://bing.com/");
+        browser.get("http://www.axa-im.com");
 
         WebElement inputField = browser.findElement(By.id("sb_form_q"));
         inputField.sendKeys("WebDriver");
