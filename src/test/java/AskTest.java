@@ -16,11 +16,10 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class AskTest {
     @Test
     public void shouldAskGoogleForWebDriver() {
-	public static WebDriver driver;
-	    
+
         ChromeOptions opts = new ChromeOptions();
         //driver = new RemoteWebDriver(new URL("http://selenium-node-chrome:5555/wd/hub"), opts);
-		driver = new RemoteWebDriver(new URL("http://selenium-hub:4444/wd/hub"), opts);
+	WebDriver driver = new RemoteWebDriver(new URL("http://selenium-hub:4444/wd/hub"), opts);
         driver.get("http://www.axa-im.com");
         System.out.println("Title 1: " + driver.getTitle());
         driver.get("https://demo.openmrs.org/openmrs/login.htm");
