@@ -3,6 +3,7 @@ package org.cucumber.tests;
 import java.net.URL;
 import java.net.MalformedURLException;
 import java.text.DateFormat;
+import java.util.Date;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -34,7 +35,7 @@ public class OpenMRSTests
 	@BeforeClass
 	public void setUP()
 	{
-	      // Use DateFormat
+              Date now = new Date();
 	      DateFormat formatter = DateFormat.getTimeInstance();        // time only
 	      System.out.println("1: " + formatter.format(now));
 		//System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
@@ -44,6 +45,7 @@ System.getProperties().put("http.proxyPort", "8080");
 System.getProperties().put("https.proxyHost", "egress-http-proxy");
 System.getProperties().put("https.proxyPort", "8080"); 	
 System.getProperties().put("http.nonProxyHosts","localhost|127.*|[::1]|selenium-hub|selenium-node-chrome|selenium-node-firefox");		ChromeOptions opts = new ChromeOptions();
+	      now = new Date();
 	      formatter = DateFormat.getTimeInstance();        // time only
 	      System.out.println("2: " + formatter.format(now));
 		try {
@@ -54,13 +56,16 @@ System.getProperties().put("http.nonProxyHosts","localhost|127.*|[::1]|selenium-
 		catch(MalformedURLException e) {
 			System.out.println("The url is not well formed: ");
 		}
+	      now = new Date();
 	      formatter = DateFormat.getTimeInstance();        // time only
 	      System.out.println("3: " + formatter.format(now));
 		driver.get("http://www.axa-im.com");	
 	        System.out.println(driver.getTitle());
+	      now = new Date();
 	      formatter = DateFormat.getTimeInstance();        // time only
 	      System.out.println("4: " + formatter.format(now));
 		testRunner = new TestNGCucumberRunner(OpenMRSTests.class);
+	      now = new Date();
 	      formatter = DateFormat.getTimeInstance();        // time only
 	      System.out.println("5: " + formatter.format(now));
 		
