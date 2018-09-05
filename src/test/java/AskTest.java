@@ -17,7 +17,7 @@ public class AskTest {
     @Test
     public void shouldAskGoogleForWebDriver() {
          
-	static WebDriver driver;
+	WebDriver driver;
 	 
         ChromeOptions opts = new ChromeOptions();
         //driver = new RemoteWebDriver(new URL("http://selenium-node-chrome:5555/wd/hub"), opts);
