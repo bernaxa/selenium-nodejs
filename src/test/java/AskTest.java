@@ -19,12 +19,22 @@ public class AskTest {
 
         ChromeOptions opts = new ChromeOptions();
         //driver = new RemoteWebDriver(new URL("http://selenium-node-chrome:5555/wd/hub"), opts);
-	WebDriver driver = new RemoteWebDriver(new URL("http://selenium-hub:4444/wd/hub"), opts);
-        driver.get("http://www.axa-im.com");
+	
+	try {
+		//driver = new RemoteWebDriver(new URL("http://selenium-node-chrome:5555/wd/hub"), opts);
+		WebDriver driver = new RemoteWebDriver(new URL("http://selenium-hub:4444/wd/hub"), opts);
+		//driver = new RemoteWebDriver(new URL("http://mobile-sp:f0467e7b-4024-4198-94f6-328384cf56a2@ondemand.saucelabs.com:80/wd/hub"), opts);
+	}
+	catch(MalformedURLException e) {
+		System.out.println("The url is not well formed: ");
+	}	    
+
+	driver.get("http://www.axa-im.com");
         System.out.println("Title 1: " + driver.getTitle());
         driver.get("https://demo.openmrs.org/openmrs/login.htm");
         System.out.println("Title 1: " + driver.getTitle());
-        /*WebDriver browser = new FirefoxDriver();
+
+	/*WebDriver browser = new FirefoxDriver();
 
         browser.get("http://www.axa-im.com");
 
