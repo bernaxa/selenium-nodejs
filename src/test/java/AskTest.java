@@ -84,6 +84,7 @@ public class AskTest {
 	formatter = DateFormat.getTimeInstance();        // time only
 	System.out.println("6: " + formatter.format(now));    
 
+	driver.quit();
 	/*WebDriver browser = new FirefoxDriver();
 
         browser.get("http://www.axa-im.com");
