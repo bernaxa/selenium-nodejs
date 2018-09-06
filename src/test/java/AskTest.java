@@ -26,10 +26,10 @@ public class AskTest {
 	DateFormat formatter = DateFormat.getTimeInstance();        // time only
 	System.out.println("1: " + formatter.format(now));    
 	    
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("proxy", getProxyJson("egress-http-proxy", 8080));
-        FirefoxOptions options = new FirefoxOptions(capabilities);
-        options.setLogLevel(Level.ALL);
+	FirefoxOptions options = new FirefoxOptions();
+	options.addPreference("network.proxy.type", 1);
+    	options.addPreference("network.proxy.socks", "egress-http-proxy");
+    	options.addPreference("network.proxy.socks_port", 8080);
 	    
   	//Capabilities chromeCapabilities = DesiredCapabilities.chrome();
   	//Capabilities firefoxCapabilities = DesiredCapabilities.firefox();
@@ -41,9 +41,10 @@ public class AskTest {
 	
 	try {
 		//driver = new RemoteWebDriver(new URL("http://selenium-node-chrome:5555/wd/hub"), options);
-		driver = new RemoteWebDriver(new URL("http://selenium-hub:4444/wd/hub"), options);
+		//driver = new RemoteWebDriver(new URL("http://selenium-hub:4444/wd/hub"), options);
 		//driver = new RemoteWebDriver(new URL("http://mobile-sp:f0467e7b-4024-4198-94f6-328384cf56a2@ondemand.saucelabs.com:80/wd/hub"), options);
 		//driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), firefoxCapabilities);
+		driver = new RemoteWebDriver(new URL("http://selenium-hub:4444/wd/hub"), options.toCapabilities());
 	}
 	catch(MalformedURLException e) {
 		System.out.println("The url is not well formed: ");
