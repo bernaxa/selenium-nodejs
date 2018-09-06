@@ -26,6 +26,11 @@ public class AskTest {
 	DateFormat formatter = DateFormat.getTimeInstance();        // time only
 	System.out.println("1: " + formatter.format(now));    
 	    
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("proxy", getProxyJson("egress-http-proxy", 8080));
+        FirefoxOptions options = new FirefoxOptions(capabilities);
+        options.setLogLevel(Level.ALL);
+	    
   	//Capabilities chromeCapabilities = DesiredCapabilities.chrome();
   	//Capabilities firefoxCapabilities = DesiredCapabilities.firefox();
 	    
@@ -33,7 +38,6 @@ public class AskTest {
 	options.addArguments("--headless");
 	options.addArguments("--no-sandbox");
 	options.addArguments("--disable-gpu");*/
-	FirefoxOptions options = new FirefoxOptions();
 	
 	try {
 		//driver = new RemoteWebDriver(new URL("http://selenium-node-chrome:5555/wd/hub"), options);
