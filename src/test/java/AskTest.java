@@ -41,9 +41,9 @@ public class AskTest {
   	//Capabilities firefoxCapabilities = DesiredCapabilities.firefox();
 	    
         ChromeOptions options = new ChromeOptions();
-	options.addArguments("--headless");
+	/*options.addArguments("--headless");
 	options.addArguments("--no-sandbox");
-	options.addArguments("--disable-gpu");
+	options.addArguments("--disable-gpu");*/
 	
 	try {
 		//driver = new RemoteWebDriver(new URL("http://selenium-node-chrome:5555/wd/hub"), options);
