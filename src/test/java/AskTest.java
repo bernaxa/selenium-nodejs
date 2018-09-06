@@ -25,9 +25,9 @@ public class AskTest {
 	System.out.println("1: " + formatter.format(now));    
 	    
         ChromeOptions options = new ChromeOptions();
-	options.add_argument('--headless')
-	options.add_argument("--no-sandbox")
-	options.add_argument("--disable-gpu")
+	options.add_argument("--headless");
+	options.add_argument("--no-sandbox");
+	options.add_argument("--disable-gpu");
         //driver = new RemoteWebDriver(new URL("http://selenium-node-chrome:5555/wd/hub"), options);
 	
 	try {
