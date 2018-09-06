@@ -13,6 +13,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class AskTest {
 
@@ -25,19 +26,20 @@ public class AskTest {
 	DateFormat formatter = DateFormat.getTimeInstance();        // time only
 	System.out.println("1: " + formatter.format(now));    
 	    
-  	Capabilities chromeCapabilities = DesiredCapabilities.chrome();
-  	Capabilities firefoxCapabilities = DesiredCapabilities.firefox();
+  	//Capabilities chromeCapabilities = DesiredCapabilities.chrome();
+  	//Capabilities firefoxCapabilities = DesiredCapabilities.firefox();
 	    
-        ChromeOptions options = new ChromeOptions();
+        /*ChromeOptions options = new ChromeOptions();
 	options.addArguments("--headless");
 	options.addArguments("--no-sandbox");
-	options.addArguments("--disable-gpu");
+	options.addArguments("--disable-gpu");*/
+	FirefoxOptions options = new FirefoxOptions();
 	
 	try {
 		//driver = new RemoteWebDriver(new URL("http://selenium-node-chrome:5555/wd/hub"), options);
-		//driver = new RemoteWebDriver(new URL("http://selenium-hub:4444/wd/hub"), options);
+		driver = new RemoteWebDriver(new URL("http://selenium-hub:4444/wd/hub"), options);
 		//driver = new RemoteWebDriver(new URL("http://mobile-sp:f0467e7b-4024-4198-94f6-328384cf56a2@ondemand.saucelabs.com:80/wd/hub"), options);
-		driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), firefoxCapabilities);
+		//driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), firefoxCapabilities);
 	}
 	catch(MalformedURLException e) {
 		System.out.println("The url is not well formed: ");
