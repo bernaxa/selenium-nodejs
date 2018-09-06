@@ -32,10 +32,10 @@ public class AskTest {
 	System.getProperties().put("https.proxyPort", "8080"); 	
 	System.getProperties().put("http.nonProxyHosts","localhost|127.*|[::1]|selenium-hub|selenium-node-chrome|selenium-node-firefox");		
 
-	FirefoxOptions options = new FirefoxOptions();
+	/*FirefoxOptions options = new FirefoxOptions();
 	options.addPreference("network.proxy.type", 1);
     	options.addPreference("network.proxy.socks", "egress-http-proxy");
-    	options.addPreference("network.proxy.socks_port", 8080);
+    	options.addPreference("network.proxy.socks_port", 8080);*/
 	    
   	//Capabilities chromeCapabilities = DesiredCapabilities.chrome();
   	//Capabilities firefoxCapabilities = DesiredCapabilities.firefox();
@@ -47,8 +47,8 @@ public class AskTest {
 	
 	try {
 		//driver = new RemoteWebDriver(new URL("http://selenium-node-chrome:5555/wd/hub"), options);
-		driver = new RemoteWebDriver(new URL("http://selenium-hub:4444/wd/hub"), options);
-		//driver = new RemoteWebDriver(new URL("http://mobile-sp:f0467e7b-4024-4198-94f6-328384cf56a2@ondemand.saucelabs.com:80/wd/hub"), options);
+		//driver = new RemoteWebDriver(new URL("http://selenium-hub:4444/wd/hub"), options);
+		driver = new RemoteWebDriver(new URL("http://mobile-sp:f0467e7b-4024-4198-94f6-328384cf56a2@ondemand.saucelabs.com:80/wd/hub"));
 		//driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), firefoxCapabilities);
 		//driver = new RemoteWebDriver(new URL("http://selenium-hub:4444/wd/hub"), options.toCapabilities());
 	}
