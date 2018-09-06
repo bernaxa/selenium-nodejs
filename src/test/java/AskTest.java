@@ -32,10 +32,10 @@ public class AskTest {
 	System.getProperties().put("https.proxyPort", "8080"); 	
 	System.getProperties().put("http.nonProxyHosts","localhost|127.*|[::1]|selenium-hub|selenium-node-chrome|selenium-node-firefox");		
 
-	/*FirefoxOptions options = new FirefoxOptions();
+	FirefoxOptions options = new FirefoxOptions();
 	options.addPreference("network.proxy.type", 1);
     	options.addPreference("network.proxy.socks", "egress-http-proxy");
-    	options.addPreference("network.proxy.socks_port", 8080);*/
+    	options.addPreference("network.proxy.socks_port", 8080);
 	    
   	//Capabilities chromeCapabilities = DesiredCapabilities.chrome();
   	//Capabilities firefoxCapabilities = DesiredCapabilities.firefox();
