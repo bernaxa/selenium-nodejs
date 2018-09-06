@@ -40,15 +40,15 @@ public class AskTest {
   	//Capabilities chromeCapabilities = DesiredCapabilities.chrome();
   	//Capabilities firefoxCapabilities = DesiredCapabilities.firefox();
 	    
-        /*ChromeOptions options = new ChromeOptions();
+        ChromeOptions options = new ChromeOptions();
 	options.addArguments("--headless");
 	options.addArguments("--no-sandbox");
-	options.addArguments("--disable-gpu");*/
+	options.addArguments("--disable-gpu");
 	
 	try {
 		//driver = new RemoteWebDriver(new URL("http://selenium-node-chrome:5555/wd/hub"), options);
 		//driver = new RemoteWebDriver(new URL("http://selenium-hub:4444/wd/hub"), options);
-		driver = new RemoteWebDriver(new URL("http://mobile-sp:f0467e7b-4024-4198-94f6-328384cf56a2@ondemand.saucelabs.com:80/wd/hub"));
+		driver = new RemoteWebDriver(new URL("http://mobile-sp:f0467e7b-4024-4198-94f6-328384cf56a2@ondemand.saucelabs.com:80/wd/hub"), options);
 		//driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), firefoxCapabilities);
 		//driver = new RemoteWebDriver(new URL("http://selenium-hub:4444/wd/hub"), options.toCapabilities());
 	}
