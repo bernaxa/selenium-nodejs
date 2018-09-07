@@ -49,8 +49,7 @@ public class AskTest {
 	options.addArguments("--disable-gpu");*/
 
 	// Add the WebDriver proxy capability.
-	Proxy proxy = new Proxy();
-	proxy.setHttpProxy("egress-http-proxy:8080");
+	Proxy proxy = new Proxy(Type.HTTP, new InetSocketAddress("egress-http-proxy", 8080));
 	options.setCapability("proxy", proxy);
 	    
 	try {
