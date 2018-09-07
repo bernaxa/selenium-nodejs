@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.net.URL;
+import java.net.Proxy;
 import java.net.MalformedURLException;
 import java.text.DateFormat;
 import java.util.Date;
@@ -44,7 +45,12 @@ public class AskTest {
 	/*options.addArguments("--headless");
 	options.addArguments("--no-sandbox");
 	options.addArguments("--disable-gpu");*/
-	
+
+	// Add the WebDriver proxy capability.
+	Proxy proxy = new Proxy();
+	proxy.setHttpProxy("egress-http-proxy:8080");
+	options.setCapability("proxy", proxy);
+	    
 	try {
 		driver = new RemoteWebDriver(new URL("http://celenium-node-chrome:5555/wd/hub"), options);
 		//driver = new RemoteWebDriver(new URL("http://selenium-node-chrome:5555/wd/hub"), options);
