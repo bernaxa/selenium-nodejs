@@ -7,6 +7,7 @@ import java.net.URL;
 import java.net.Proxy;
 import java.net.Proxy.Type;
 import java.net.SocketAddress;
+import java.net.InetSocketAddress;
 import java.net.MalformedURLException;
 import java.text.DateFormat;
 import java.util.Date;
