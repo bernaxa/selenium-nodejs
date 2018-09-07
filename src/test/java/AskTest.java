@@ -50,8 +50,8 @@ public class AskTest {
 	options.addArguments("--disable-gpu");*/
 
 	// Add the WebDriver proxy capability.
-	Proxy proxy = new Proxy(Type.HTTP, new InetSocketAddress("egress-http-proxy", 8080));
-	options.setCapability("proxy", proxy);
+	//Proxy proxy = new Proxy(Type.HTTP, new InetSocketAddress("egress-http-proxy", 8080));
+	//options.setCapability("proxy", proxy);
 	    
 	try {
 		driver = new RemoteWebDriver(new URL("http://celenium-node-chrome:5555/wd/hub"), options);
