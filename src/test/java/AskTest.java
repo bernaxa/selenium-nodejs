@@ -46,7 +46,8 @@ public class AskTest {
 	options.addArguments("--disable-gpu");*/
 	
 	try {
-		driver = new RemoteWebDriver(new URL("http://selenium-node-chrome:5555/wd/hub"), options);
+		driver = new RemoteWebDriver(new URL("http://celenium-node-chrome:5555/wd/hub"), options);
+		//driver = new RemoteWebDriver(new URL("http://selenium-node-chrome:5555/wd/hub"), options);
 		//driver = new RemoteWebDriver(new URL("http://selenium-hub:4444/wd/hub"), options);
 		//driver = new RemoteWebDriver(new URL("http://mobile-sp:f0467e7b-4024-4198-94f6-328384cf56a2@ondemand.saucelabs.com:80/wd/hub"), options);
 		//driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), firefoxCapabilities);
