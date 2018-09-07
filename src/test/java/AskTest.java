@@ -52,7 +52,7 @@ public class AskTest {
 	// Add the WebDriver proxy capability.
 	//Proxy proxy = new Proxy(Type.HTTP, new InetSocketAddress("egress-http-proxy", 8080));
 	//options.setCapability("proxy", proxy);
-	options.addArguments("--proxy-server=http://egress-http-proxy:8080");
+	options.addArguments("--proxy-server=http://egress-http-proxy:8080 --proxy-bypass-list=celenium-hub;celenium-node-chrome");
 	    
 	try {
 		driver = new RemoteWebDriver(new URL("http://celenium-node-chrome:5555/wd/hub"), options);
