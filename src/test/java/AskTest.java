@@ -52,12 +52,12 @@ public class AskTest {
 	// Add the WebDriver proxy capability.
 	//Proxy proxy = new Proxy(Type.HTTP, new InetSocketAddress("egress-http-proxy", 8080));
 	//options.setCapability("proxy", proxy);
-	options.addArguments("--proxy-server=http://egress-http-proxy:8080 --proxy-bypass-list=celenium-hub;celenium-node-chrome");
+	//options.addArguments("--proxy-server=http://egress-http-proxy:8080 --proxy-bypass-list=celenium-hub;celenium-node-chrome");
 	    
 	try {
-		driver = new RemoteWebDriver(new URL("http://celenium-node-chrome:5555/wd/hub"), options);
+		//driver = new RemoteWebDriver(new URL("http://celenium-node-chrome:5555/wd/hub"), options);
 		//driver = new RemoteWebDriver(new URL("http://selenium-node-chrome:5555/wd/hub"), options);
-		//driver = new RemoteWebDriver(new URL("http://selenium-hub:4444/wd/hub"), options);
+		driver = new RemoteWebDriver(new URL("http://selenium-hub:4444/wd/hub"), options);
 		//driver = new RemoteWebDriver(new URL("http://mobile-sp:f0467e7b-4024-4198-94f6-328384cf56a2@ondemand.saucelabs.com:80/wd/hub"), options);
 		//driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), firefoxCapabilities);
 		//driver = new RemoteWebDriver(new URL("http://selenium-hub:4444/wd/hub"), options.toCapabilities());
