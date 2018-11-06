@@ -56,11 +56,12 @@ public class AskTest {
 	    
 	try {
 		//driver = new RemoteWebDriver(new URL("http://celenium-node-chrome:5555/wd/hub"), options);
-		driver = new RemoteWebDriver(new URL("http://selenium-node-chrome:5555/wd/hub"), options);
+		//driver = new RemoteWebDriver(new URL("http://selenium-node-chrome:5555/wd/hub"), options);
 		//driver = new RemoteWebDriver(new URL("http://selenium-hub:4444/wd/hub"), options);
 		//driver = new RemoteWebDriver(new URL("http://mobile-sp:f0467e7b-4024-4198-94f6-328384cf56a2@ondemand.saucelabs.com:80/wd/hub"), options);
 		//driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), firefoxCapabilities);
 		//driver = new RemoteWebDriver(new URL("http://selenium-hub:4444/wd/hub"), options.toCapabilities());
+		driver = new RemoteWebDriver(new URL("http://zalenium:4444/wd/hub"), options
 	}
 	catch(MalformedURLException e) {
 		System.out.println("The url is not well formed: ");
