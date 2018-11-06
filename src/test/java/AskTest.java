@@ -34,7 +34,7 @@ public class AskTest {
 	System.getProperties().put("http.proxyPort", "8080");
 	System.getProperties().put("https.proxyHost", "egress-http-proxy");
 	System.getProperties().put("https.proxyPort", "8080"); 	
-	System.getProperties().put("http.nonProxyHosts","localhost|127.*|[::1]|selenium-hub|selenium-node-chrome|selenium-node-firefox|celenium-hub|celenium-node-chrome|celenium-node-firefox");		
+	System.getProperties().put("http.nonProxyHosts","localhost|127.*|[::1]|zalenium|selenium-hub|selenium-node-chrome|selenium-node-firefox|celenium-hub|celenium-node-chrome|celenium-node-firefox");		
 
 	/*FirefoxOptions options = new FirefoxOptions();
 	options.addPreference("network.proxy.type", 1);
